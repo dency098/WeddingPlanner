@@ -1,0 +1,90 @@
+.decoration-enquiry-modal {
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.decoration-schedule-editor {
+  padding: 1rem;
+  border: 1px solid #eadfd8;
+  border-radius: 14px;
+  background: #fbf8f5;
+}
+
+.decoration-schedule-event {
+  background: #fff;
+  border: 1px solid #eee3dc !important;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(54, 38, 34, 0.04);
+}
+
+.user-decorator-event-list {
+  display: grid;
+  flex: 1 1 100%;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.user-decorator-event,
+.vendor-decorator-event {
+  min-width: 0;
+  padding: 0.85rem 1rem;
+  border: 1px solid #eadfd8;
+  border-radius: 12px;
+  background: #fbf8f5;
+  color: #403735;
+  overflow-wrap: anywhere;
+}
+
+.user-decorator-event > div:first-child,
+.vendor-decorator-event > div:first-child {
+  color: #4b3735;
+}
+
+.vendor-decorator-enquiry-card {
+  border-color: #eadfd8 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 24px rgba(54, 38, 34, 0.06) !important;
+}
+
+.vendor-decorator-enquiry-header {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) minmax(0, 2fr) auto;
+  align-items: start;
+  gap: 1rem;
+}
+
+.vendor-decorator-event-list {
+  min-width: 0;
+}
+
+.vendor-decorator-enquiry-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #eee5df;
+  border-radius: 12px;
+  background: #fbf8f5;
+  font-size: 0.9rem;
+}
+
+.vendor-decorator-enquiry-details > div:last-child:nth-child(3) {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 767.98px) {
+  .decoration-enquiry-modal {
+    padding: 1rem !important;
+  }
+
+  .vendor-decorator-enquiry-header,
+  .vendor-decorator-enquiry-details {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .vendor-decorator-enquiry-details > div:last-child:nth-child(3) {
+    grid-column: auto;
+  }
+}
